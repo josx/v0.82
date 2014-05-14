@@ -123,7 +123,7 @@ class Minibloq : public wxApp
 #if defined (linux)
             wxLogNull logNo;
 #endif
-            if ( !locale.Init(wxLANGUAGE_ENGLISH, wxLOCALE_CONV_ENCODING) )
+            if ( !locale.Init(wxLANGUAGE_ENGLISH, wxLOCALE_LOAD_DEFAULT) )
                 wxLogWarning(_("Error #1: This language is not supported by the system."));
 
             wxString lanPath(wxStandardPaths::Get().GetExecutablePath().BeforeLast(wxFileName::GetPathSeparator()) +
